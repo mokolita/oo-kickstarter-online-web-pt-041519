@@ -10,6 +10,6 @@ class Project
   
   def add_backer(backer)
     @backers << backer 
-    backer.back_project(self) unless backer.back_project.include?(backer)
+    backer.back_project(self) unless backer.backed_projects.include?(backer)
   end 
 end 
